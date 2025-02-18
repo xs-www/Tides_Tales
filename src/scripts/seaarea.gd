@@ -1,0 +1,33 @@
+extends Node2D
+
+##海域类
+class_name Seaarea
+
+##海域名称
+@export var area_name : String
+##海域描述
+@export var description : String
+##海域鱼群
+@export var fishes : Array[FishSchool]
+##海域类别
+@export var area_type : String
+
+##初始化
+func _init(type : String = 'coastland') -> void:
+	var name_list = Functions._loadJSON("res://src/data/seaareanames.json")
+	area_name = Functions._randomChoice(name_list)
+	description = Functions._loadJSON("res://src/data/description.json")[type]
+	area_type = type
+
+##获取海域信息字典
+func _getstate():
+	
+	var dic = {
+		"area_name":area_name,
+		"description":description,
+		"fishes":fishes,
+		"type":area_type
+	}
+	
+	return dic
+	

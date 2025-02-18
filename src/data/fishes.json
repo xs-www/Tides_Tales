@@ -1,0 +1,246 @@
+{
+    "seafood_list": [
+      {
+        "name": "小黄鱼",
+        "rank": "普通",
+        "description": "小黄鱼是一种常见的海洋鱼类，鱼肉呈淡黄色，口感鲜嫩，富含蛋白质和不饱和脂肪酸。它们通常生活在近海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 1.0,
+          "coastwater": 0.0,
+          "distantwater": 0.0
+        },
+        "price": [10, 15]
+      },
+      {
+        "name": "带鱼",
+        "rank": "普通",
+        "description": "带鱼是一种长条形的海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和维生素。它们通常生活在近海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 0.0,
+          "coastwater": 0.4,
+          "distantwater": 0.6
+        },
+        "price": [8, 12]
+      },
+      {
+        "name": "鲭鱼",
+        "rank": "普通",
+        "description": "鲭鱼是一种常见的海洋鱼类，鱼肉呈粉红色，口感鲜嫩，富含蛋白质和不饱和脂肪酸。它们通常生活在近海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 0.1,
+          "coastwater": 0.4,
+          "distantwater": 0.5
+        },
+        "price": [6, 10]
+      },
+      {
+        "name": "沙丁鱼",
+        "rank": "普通",
+        "description": "沙丁鱼是一种小型海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和维生素。它们通常生活在近海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 1.0,
+          "coastwater": 0.0,
+          "distantwater": 0.0
+        },
+        "price": [5, 8]
+      },
+      {
+        "name": "鳕鱼",
+        "rank": "普通",
+        "description": "鳕鱼是一种常见的海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和不饱和脂肪酸。它们通常生活在寒冷的深海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 0.0,
+          "coastwater": 0.0,
+          "distantwater": 1.0
+        },
+        "price": [12, 18]
+      },
+      {
+        "name": "金枪鱼",
+        "rank": "普通",
+        "description": "金枪鱼是一种大型海洋鱼类，鱼肉呈红色，口感鲜嫩，富含蛋白质和不饱和脂肪酸。它们通常生活在深海区域，捕捞难度较高。",
+        "weight": {
+          "coastland": 0.0,
+          "coastwater": 0.0,
+          "distantwater": 1.0
+        },
+        "price": [15, 25]
+      },
+      {
+        "name": "石斑鱼",
+        "rank": "普通",
+        "description": "石斑鱼是一种常见的海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和胶原蛋白。它们通常生活在珊瑚礁附近，捕捞难度适中。",
+        "weight": {
+          "coastland": 0.1,
+          "coastwater": 0.4,
+          "distantwater": 0.5
+        },
+        "price": [12, 20]
+      },
+      {
+        "name": "比目鱼",
+        "rank": "普通",
+        "description": "比目鱼是一种扁平的海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和维生素。它们通常生活在浅海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 1.0,
+          "coastwater": 0.0,
+          "distantwater": 0.0
+        },
+        "price": [8, 12]
+      },
+      {
+        "name": "秋刀鱼",
+        "rank": "普通",
+        "description": "秋刀鱼是一种长条形的海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和维生素。它们通常生活在近海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 1.0,
+          "coastwater": 0.0,
+          "distantwater": 0.0
+        },
+        "price": [6, 10]
+      },
+      {
+        "name": "海鳗",
+        "rank": "普通",
+        "description": "海鳗是一种长条形的海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和维生素。它们通常生活在深海区域，捕捞难度较高。",
+        "weight": {
+          "coastland": 0.0,
+          "coastwater": 0.0,
+          "distantwater": 1.0
+        },
+        "price": [12, 18]
+      },
+      {
+        "name": "扇贝",
+        "rank": "普通",
+        "description": "扇贝是一种常见的贝类，壳呈扇形，肉质鲜美，富含蛋白质和微量元素。它们通常生活在浅海的沙质海底。",
+        "weight": {
+          "coastland": 0.3,
+          "coastwater": 0.5,
+          "distantwater": 0.2
+        },
+        "price": [15, 25]
+      },
+      {
+        "name": "蛤蜊",
+        "rank": "普通",
+        "description": "蛤蜊是一种常见的贝类，壳呈椭圆形，肉质鲜美，富含蛋白质和微量元素。它们通常生活在浅海的泥沙中。",
+        "weight": {
+          "coastland": 0.4,
+          "coastwater": 0.4,
+          "distantwater": 0.2
+        },
+        "price": [10, 20]
+      },
+      {
+        "name": "牡蛎",
+        "rank": "普通",
+        "description": "牡蛎是一种常见的贝类，壳呈长形，肉质鲜美，富含蛋白质和微量元素。它们通常附着在海边的岩石或礁石上。",
+        "weight": {
+          "coastland": 0.5,
+          "coastwater": 0.3,
+          "distantwater": 0.2
+        },
+        "price": [12, 22]
+      },
+      {
+        "name": "鲍鱼",
+        "rank": "普通",
+        "description": "鲍鱼是一种珍贵的贝类，壳呈圆形，肉质鲜美，富含蛋白质和微量元素。它们通常生活在珊瑚礁或岩石附近。",
+        "weight": {
+          "coastland": 0.2,
+          "coastwater": 0.4,
+          "distantwater": 0.4
+        },
+        "price": [20, 35]
+      },
+      {
+        "name": "海螺",
+        "rank": "普通",
+        "description": "海螺是一种常见的贝类，壳呈螺旋形，肉质鲜美，富含蛋白质和微量元素。它们通常生活在浅海的沙质海底。",
+        "weight": {
+          "coastland": 0.3,
+          "coastwater": 0.4,
+          "distantwater": 0.3
+        },
+        "price": [18, 30]
+      },
+      {
+        "name": "海参",
+        "rank": "普通",
+        "description": "海参是一种珍贵的海产品，身体呈圆筒形，肉质鲜美，富含蛋白质和微量元素。它们通常生活在海底的岩石或珊瑚礁附近。",
+        "weight": {
+          "coastland": 0.1,
+          "coastwater": 0.3,
+          "distantwater": 0.6
+        },
+        "price": [25, 40]
+      },
+      {
+        "name": "海胆",
+        "rank": "普通",
+        "description": "海胆是一种常见的海产品，身体呈球形，外壳有刺，内部的生殖腺可食用，味道鲜美。它们通常生活在海底的岩石或珊瑚礁附近。",
+        "weight": {
+          "coastland": 0.2,
+          "coastwater": 0.4,
+          "distantwater": 0.4
+        },
+        "price": [22, 38]
+      },
+      {
+        "name": "海蜇",
+        "rank": "普通",
+        "description": "海蜇是一种常见的海产品，身体呈伞形，肉质脆嫩，富含蛋白质和微量元素。它们通常生活在浅海区域。",
+        "weight": {
+          "coastland": 0.4,
+          "coastwater": 0.4,
+          "distantwater": 0.2
+        },
+        "price": [15, 28]
+      },
+      {
+        "name": "海带",
+        "rank": "普通",
+        "description": "海带是一种常见的海藻，呈带状，富含碘和其他微量元素。它们通常生长在浅海的岩石上。",
+        "weight": {
+          "coastland": 0.5,
+          "coastwater": 0.3,
+          "distantwater": 0.2
+        },
+        "price": [8, 18]
+      },
+      {
+        "name": "紫菜",
+        "rank": "普通",
+        "description": "紫菜是一种常见的海藻，呈紫色薄膜状，富含蛋白质和微量元素。它们通常生长在浅海的岩石上。",
+        "weight": {
+          "coastland": 0.4,
+          "coastwater": 0.4,
+          "distantwater": 0.2
+        },
+        "price": [10, 20]
+      },
+      {
+        "name": "海鲫鱼",
+        "rank": "普通",
+        "description": "海鲫鱼是一种常见的小型海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和维生素。它们通常生活在近岸的浅海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 1.0,
+          "coastwater": 0.0,
+          "distantwater": 0.0
+        },
+        "price": [5, 10]
+      },
+      {
+        "name": "海鲶鱼",
+        "rank": "普通",
+        "description": "海鲶鱼是一种常见的海洋鱼类，鱼肉呈白色，口感鲜嫩，富含蛋白质和维生素。它们通常生活在近岸的浅海区域，捕捞难度较低。",
+        "weight": {
+          "coastland": 1.0,
+          "coastwater": 0.0,
+          "distantwater": 0.0
+        },
+        "price": [6, 12]
+      }
+    ]
+  }

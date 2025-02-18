@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckv65n3gst1v8"]
+
+[ext_resource type="Script" path="res://src/scripts/main.gd" id="1_4ly3h"]
+[ext_resource type="Texture2D" uid="uid://c1oj6paote8ch" path="res://src/assets/texture/background/bg main.jpg" id="2_awxf4"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_4ly3h")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1154.0
+offset_bottom = 645.0
+texture = ExtResource("2_awxf4")
+
+[node name="fishing" type="Button" parent="."]
+offset_left = 961.0
+offset_top = 446.0
+offset_right = 1066.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 24
+text = "出渔"
+
+[node name="sell" type="Button" parent="."]
+offset_left = 100.0
+offset_top = 319.0
+offset_right = 200.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 24
+text = "货殖"
+
+[connection signal="pressed" from="fishing" to="." method="_on_fishing_pressed"]
+[connection signal="pressed" from="sell" to="." method="_on_sell_pressed"]
