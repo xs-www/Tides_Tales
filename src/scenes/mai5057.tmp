@@ -27,14 +27,5 @@ offset_bottom = 376.0
 theme_override_font_sizes/font_size = 24
 text = "货殖"
 
-[node name="nextday" type="Button" parent="."]
-offset_left = 964.0
-offset_top = 528.0
-offset_right = 1066.0
-offset_bottom = 588.0
-theme_override_font_sizes/font_size = 24
-text = "nextday"
-
 [connection signal="pressed" from="fishing" to="." method="_on_fishing_pressed"]
 [connection signal="pressed" from="sell" to="." method="_on_sell_pressed"]
-[connection signal="pressed" from="nextday" to="." method="_on_nextday_pressed"]

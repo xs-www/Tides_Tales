@@ -2,14 +2,14 @@
 class_name Functions
 
 ##取整
-static func _round(num : float, format : int = 0) -> int:
+static func _round(num : float, format : int = 0) -> float:
 	num *= pow(10, format)
 	num = roundi(num)
 	num *= pow(10, -format)
 	return num
 
 ##从目标地址加载json文件，返回json
-static func _loadJSON(file_path : String) -> JSON:
+static func _loadJSON(file_path : String):
 	var json_file = FileAccess.open(file_path, FileAccess.READ)
 	var file_text = json_file.get_as_text()
 	var json = JSON.parse_string((file_text))
@@ -42,7 +42,7 @@ static func _randomChoiceWithChance(list : Array, chance_list : Array):
 
 ##从列表1中按照列表2的权重随机挑选元素
 static func _randomChoiceWithWeight(list : Array, weight_list : Array):
-	var weightSum = 0
+	var weightSum = 0.0
 	for w in weight_list:
 		weightSum += w
 	var chance_list = []
@@ -59,8 +59,38 @@ static func _randfn_range(minn: float, maxn: float) -> float:
 	while abs(num - mean) >= delta:
 		num = RandomNumberGenerator.new().randfn(mean, delta/2)
 	return num
+	
+##
+static func _sum(list: Array) -> float:
+	var sum = 0.0
+	for i in list:
+		sum += i
+	return sum
+
+##
+static func _addIntoDictionary(key: String, val: Variant, dic: Dictionary):
+	if key in dic:
+		dic[key] += val
+	else:
+		dic[key] = val
+	return dic
+
 
 ##钓鱼，返回渔获列表
-static func _fishing(time: int, location: Seaarea, boat: Boat) -> Array:
-	var catch = []
-	return catch
+static func _fishing(time: int, sea_area: Seaarea, boat: Boat) -> Dictionary:
+	var catchinfo = {}
+	var maximun_weight = boat.boat_capability
+	var catch_p = boat._fishsuccess(sea_area)
+	var current_weight = 0
+	for i in range(1, time * 60):
+		if randf() < catch_p:
+			var fishinfo = sea_area._getfishinfo()
+			if _sum(fishinfo["fishpopu"]) == 0:
+				break
+			var caughtfish = Functions._randomChoiceWithWeight(fishinfo["fishlist"], fishinfo["fishpopu"])
+			sea_area._setfishinfo(caughtfish, -1)
+			_addIntoDictionary(caughtfish, [i], catchinfo)
+	var dic = {}
+	for fishtype in catchinfo:
+		dic[fishtype] = len(catchinfo[fishtype])
+	return dic
