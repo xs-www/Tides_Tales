@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1oj6paote8ch"
-path="res://.godot/imported/bg main.jpg-2cb56972e41a143d536db712357dc009.ctex"
+uid="uid://bqday7gdotxeh"
+path="res://.godot/imported/bg fishing.png-c2e4390db8d194a72b5fec9cb48f2fb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://src/assets/texture/background/bg main.jpg"
-dest_files=["res://.godot/imported/bg main.jpg-2cb56972e41a143d536db712357dc009.ctex"]
+source_file="res://src/assets/texture/background/bg fishing.png"
+dest_files=["res://.godot/imported/bg fishing.png-c2e4390db8d194a72b5fec9cb48f2fb6.ctex"]
 
 [params]
 

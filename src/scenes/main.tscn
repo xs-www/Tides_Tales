@@ -1,17 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckv65n3gst1v8"]
+[gd_scene load_steps=5 format=3 uid="uid://ckv65n3gst1v8"]
 
 [ext_resource type="Script" path="res://src/scripts/main.gd" id="1_4ly3h"]
-[ext_resource type="Texture2D" uid="uid://c1oj6paote8ch" path="res://src/assets/texture/background/bg main.jpg" id="2_awxf4"]
+[ext_resource type="Texture2D" uid="uid://dw2jpc2mwe4ak" path="res://src/assets/texture/background/bg main.png" id="2_qeasj"]
+[ext_resource type="Texture2D" uid="uid://bqday7gdotxeh" path="res://src/assets/texture/background/bg fishing.png" id="3_iu0wt"]
+[ext_resource type="Texture2D" uid="uid://d3pt528i57y41" path="res://src/assets/texture/background/bg market.jpg" id="4_770mx"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_4ly3h")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bg main" type="TextureRect" parent="ui"]
+layout_mode = 0
 offset_right = 1154.0
 offset_bottom = 645.0
-texture = ExtResource("2_awxf4")
+texture = ExtResource("2_qeasj")
+expand_mode = 1
 
-[node name="fishing" type="Button" parent="."]
+[node name="fishing" type="Button" parent="ui/bg main"]
+layout_mode = 0
 offset_left = 961.0
 offset_top = 446.0
 offset_right = 1066.0
@@ -19,7 +30,8 @@ offset_bottom = 502.0
 theme_override_font_sizes/font_size = 24
 text = "出渔"
 
-[node name="sell" type="Button" parent="."]
+[node name="sell" type="Button" parent="ui/bg main"]
+layout_mode = 0
 offset_left = 100.0
 offset_top = 319.0
 offset_right = 200.0
@@ -27,7 +39,8 @@ offset_bottom = 376.0
 theme_override_font_sizes/font_size = 24
 text = "货殖"
 
-[node name="nextday" type="Button" parent="."]
+[node name="nextday" type="Button" parent="ui/bg main"]
+layout_mode = 0
 offset_left = 964.0
 offset_top = 528.0
 offset_right = 1066.0
@@ -35,6 +48,26 @@ offset_bottom = 588.0
 theme_override_font_sizes/font_size = 24
 text = "nextday"
 
-[connection signal="pressed" from="fishing" to="." method="_on_fishing_pressed"]
-[connection signal="pressed" from="sell" to="." method="_on_sell_pressed"]
-[connection signal="pressed" from="nextday" to="." method="_on_nextday_pressed"]
+[node name="bg fishing" type="TextureRect" parent="ui"]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("3_iu0wt")
+expand_mode = 1
+
+[node name="bg market" type="TextureRect" parent="ui"]
+visible = false
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+texture = ExtResource("4_770mx")
+
+[node name="MarginContainer" type="MarginContainer" parent="ui/bg market"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[connection signal="pressed" from="ui/bg main/fishing" to="." method="_on_fishing_pressed"]
+[connection signal="pressed" from="ui/bg main/sell" to="." method="_on_sell_pressed"]
+[connection signal="pressed" from="ui/bg main/nextday" to="." method="_on_nextday_pressed"]

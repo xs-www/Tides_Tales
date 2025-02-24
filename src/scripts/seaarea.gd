@@ -16,9 +16,9 @@ class_name Seaarea
 func _init(type : String = 'coastland') -> void:
 	var name_list = Functions._loadJSON("res://src/data/seaareanames.json")
 	area_name = Functions._randomChoice(name_list)
-	description = Functions._loadJSON("res://src/data/description.json")[type]
 	area_type = type
-
+	description = Functions._loadJSON("res://src/data/seaarea.json")[area_type]["description"]
+	
 ##获取海域信息字典
 func _getstate():
 	var fishinfo = []
@@ -33,7 +33,7 @@ func _getstate():
 	
 	return dic
 
-func _add_fishschool(fish: FishSchool):
+func _addfishschool(fish: FishSchool):
 	var same_school = null
 	for f in fishes:
 		if f.school_name == fish.school_name:
@@ -71,4 +71,7 @@ func _update():
 	for f in fishes:
 		f._naturegrow()
 	
+func _genfishschool():
 	
+	
+	pass

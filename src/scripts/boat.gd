@@ -1,9 +1,8 @@
-extends Node2D
+extends Item
 
 ##船类
 class_name Boat
 
-@export var boat_name: String
 @export var boat_capability: int
 @export var fish_net: FishNet
 @export var boat_durability: int
@@ -12,7 +11,7 @@ class_name Boat
 ##
 func _init(n : String = 'a boat') -> void:
 	
-	boat_name = n
+	item_name = n
 	boat_capability = 500
 	boat_durability = 100
 	boat_type = 'small'
@@ -23,7 +22,7 @@ func _init(n : String = 'a boat') -> void:
 func _getstate() -> Dictionary:
 	
 	return {
-		"boat_name":boat_name,
+		"item_name":item_name,
 		"boat_capability":boat_capability,
 		"boat_durability":boat_durability,
 		"boat_type":boat_type,

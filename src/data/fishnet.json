@@ -1,0 +1,8 @@
+{
+    "小渔网":{
+        "rank": "normal",
+        "description": "一个普通的渔网",
+        "durability": 100,
+	    "probability": 0.1
+    }
+}
