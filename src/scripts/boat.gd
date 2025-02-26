@@ -1,37 +1,56 @@
 extends Item
 
-##船类
+##渔船类，继承自Item
 class_name Boat
 
+##渔船容量
 @export var boat_capability: int
+##装配的渔网
 @export var fish_net: FishNet
+##渔船耐久
 @export var boat_durability: int
+##渔船类别
 @export var boat_type: String
 
-##
-func _init(n : String = 'a boat') -> void:
+##初始化渔网
+func _init(_item_name : String = 'a boat') -> void:
 	
-	item_name = n
+	item_name = _item_name
+	item_type = 'boats'
+	item_stack = 1
+	item_quantity = 1
 	boat_capability = 500
 	boat_durability = 100
 	boat_type = 'small'
 	_setfishnet()
 	pass
 
-##
+##获取渔网状态
 func _getstate() -> Dictionary:
 	
-	return {
-		"item_name":item_name,
-		"boat_capability":boat_capability,
-		"boat_durability":boat_durability,
-		"boat_type":boat_type,
-		"fish_net":fish_net._getstate()
-	}
+	var dic = super._getstate()  # 调用父类的 _getstate()
+	
+	dic["boat_capability"] = boat_capability
+	dic["boat_durability"] = boat_durability
+	dic["boat_type"] = boat_type
+	dic["fish_net"] = fish_net._getstate()
+	
+	return dic
 
+##获取渔网简略状态（物品名称：耐久）
+func _getstatesimply() -> Dictionary:
+	
+	var dic = {}
+	
+	dic[item_name] = str(boat_durability) + "%"
+	
+	return dic
+
+##设置渔网
 func _setfishnet(fn: FishNet = FishNet.new()) -> void:
 	fish_net = fn
 
+##计算捕鱼成功率
 func _fishsuccess(sea_area: Seaarea) -> float:
 	var area_coefficient = {
 		'coastland': 1.0,

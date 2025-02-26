@@ -12,8 +12,10 @@ func _ready() -> void:
 	var f2 = FishSchool.new('沙丁鱼')
 	sea_area._addfishschool(f1)
 	sea_area._addfishschool(f2)
-	print(sea_area._getstate())
-	print(boat._getstate())
+	player_inventory._add_item(boat)
+	print('seaarea: ', sea_area._getstate())
+	print('boat: ', boat._getstatesimply())
+	print('player_inventory: ', player_inventory._getstate())
 	pass # Replace with function body.
 
 
@@ -24,6 +26,7 @@ func _process(delta: float) -> void:
 
 func _on_fishing_pressed() -> void:
 	var fished = Functions._fishing(30, sea_area, boat)
+	print(fished)
 	player_inventory._addfish(fished)
 	print(sea_area._getstate())
 	print(player_inventory._getstate())
@@ -31,6 +34,9 @@ func _on_fishing_pressed() -> void:
 
 
 func _on_sell_pressed() -> void:
+	for f in player_inventory.items["fishes"]:
+		player_inventory._sell(f, f.item_quantity)
+	print(player_inventory._getstate())
 	pass # Replace with function body.
 
 

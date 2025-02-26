@@ -7,10 +7,7 @@
 		"coastwater": 0.0,
 		"distantwater": 0.0
 	  },
-	  "price": [
-		10,
-		15
-	  ]
+	  "price": 10
 	},
 	"带鱼": {
 	  "rank": "normal",
@@ -20,10 +17,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.6
 	  },
-	  "price": [
-		8,
-		12
-	  ]
+	  "price": 8
 	},
 	"鲭鱼": {
 	  "rank": "normal",
@@ -33,10 +27,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.5
 	  },
-	  "price": [
-		6,
-		10
-	  ]
+	  "price": 6
 	},
 	"沙丁鱼": {
 	  "rank": "normal",
@@ -46,10 +37,7 @@
 		"coastwater": 0.0,
 		"distantwater": 0.0
 	  },
-	  "price": [
-		5,
-		8
-	  ]
+	  "price": 5
 	},
 	"鳕鱼": {
 	  "rank": "normal",
@@ -59,10 +47,7 @@
 		"coastwater": 0.0,
 		"distantwater": 1.0
 	  },
-	  "price": [
-		12,
-		18
-	  ]
+	  "price": 12
 	},
 	"金枪鱼": {
 	  "rank": "normal",
@@ -72,10 +57,7 @@
 		"coastwater": 0.0,
 		"distantwater": 1.0
 	  },
-	  "price": [
-		15,
-		25
-	  ]
+	  "price": 15
 	},
 	"石斑鱼": {
 	  "rank": "normal",
@@ -85,10 +67,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.5
 	  },
-	  "price": [
-		12,
-		20
-	  ]
+	  "price": 12
 	},
 	"比目鱼": {
 	  "rank": "normal",
@@ -98,10 +77,7 @@
 		"coastwater": 0.0,
 		"distantwater": 0.0
 	  },
-	  "price": [
-		8,
-		12
-	  ]
+	  "price": 8
 	},
 	"秋刀鱼": {
 	  "rank": "normal",
@@ -111,10 +87,7 @@
 		"coastwater": 0.0,
 		"distantwater": 0.0
 	  },
-	  "price": [
-		6,
-		10
-	  ]
+	  "price": 6
 	},
 	"海鳗": {
 	  "rank": "normal",
@@ -124,10 +97,7 @@
 		"coastwater": 0.0,
 		"distantwater": 1.0
 	  },
-	  "price": [
-		12,
-		18
-	  ]
+	  "price": 12
 	},
 	"扇贝": {
 	  "rank": "normal",
@@ -137,10 +107,7 @@
 		"coastwater": 0.5,
 		"distantwater": 0.2
 	  },
-	  "price": [
-		15,
-		25
-	  ]
+	  "price": 15
 	},
 	"蛤蜊": {
 	  "rank": "normal",
@@ -150,10 +117,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.2
 	  },
-	  "price": [
-		10,
-		20
-	  ]
+	  "price": 10
 	},
 	"牡蛎": {
 	  "rank": "normal",
@@ -163,10 +127,7 @@
 		"coastwater": 0.3,
 		"distantwater": 0.2
 	  },
-	  "price": [
-		12,
-		22
-	  ]
+	  "price": 12
 	},
 	"鲍鱼": {
 	  "rank": "normal",
@@ -176,10 +137,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.4
 	  },
-	  "price": [
-		20,
-		35
-	  ]
+	  "price": 20
 	},
 	"海螺": {
 	  "rank": "normal",
@@ -189,10 +147,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.3
 	  },
-	  "price": [
-		18,
-		30
-	  ]
+	  "price": 18
 	},
 	"海参": {
 	  "rank": "normal",
@@ -202,10 +157,7 @@
 		"coastwater": 0.3,
 		"distantwater": 0.6
 	  },
-	  "price": [
-		25,
-		40
-	  ]
+	  "price": 25
 	},
 	"海胆": {
 	  "rank": "normal",
@@ -215,10 +167,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.4
 	  },
-	  "price": [
-		22,
-		38
-	  ]
+	  "price": 22
 	},
 	"海蜇": {
 	  "rank": "normal",
@@ -228,10 +177,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.2
 	  },
-	  "price": [
-		15,
-		28
-	  ]
+	  "price": 15
 	},
 	"海带": {
 	  "rank": "normal",
@@ -241,10 +187,7 @@
 		"coastwater": 0.3,
 		"distantwater": 0.2
 	  },
-	  "price": [
-		8,
-		18
-	  ]
+	  "price": 3
 	},
 	"紫菜": {
 	  "rank": "normal",
@@ -254,10 +197,7 @@
 		"coastwater": 0.4,
 		"distantwater": 0.2
 	  },
-	  "price": [
-		10,
-		20
-	  ]
+	  "price": 10
 	},
 	"海鲫鱼": {
 	  "rank": "normal",
@@ -267,10 +207,7 @@
 		"coastwater": 0.0,
 		"distantwater": 0.0
 	  },
-	  "price": [
-		5,
-		10
-	  ]
+	  "price": 5
 	},
 	"海鲶鱼": {
 	  "rank": "normal",
@@ -280,9 +217,6 @@
 		"coastwater": 0.0,
 		"distantwater": 0.0
 	  },
-	  "price": [
-		6,
-		12
-	  ]
+	  "price": 6
 	}
  }

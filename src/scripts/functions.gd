@@ -88,7 +88,7 @@ static func _fishing(time: int, sea_area: Seaarea, boat: Boat) -> Dictionary:
 			if _sum(fishinfo["fishpopu"]) == 0:
 				break
 			var caughtfish = Functions._randomChoiceWithWeight(fishinfo["fishlist"], fishinfo["fishpopu"])
-			sea_area._setfishinfo(caughtfish, -1)
+			sea_area._setfishquantity(caughtfish, -1)
 			_addIntoDictionary(caughtfish, [i], catchinfo)
 	var dic = {}
 	for fishtype in catchinfo:

@@ -19,7 +19,7 @@ func _init(type : String = 'coastland') -> void:
 	area_type = type
 	description = Functions._loadJSON("res://src/data/seaarea.json")[area_type]["description"]
 	
-##获取海域信息字典
+##获取海域状态
 func _getstate():
 	var fishinfo = []
 	for f in fishes:
@@ -33,6 +33,7 @@ func _getstate():
 	
 	return dic
 
+##添加鱼群
 func _addfishschool(fish: FishSchool):
 	var same_school = null
 	for f in fishes:
@@ -43,7 +44,8 @@ func _addfishschool(fish: FishSchool):
 		same_school.school_population += fish.school_population
 	else:
 		fishes.append(fish)
-	
+
+##获得海域内鱼群信息
 func _getfishinfo() -> Dictionary:
 	
 	var fishlist = []
@@ -57,7 +59,8 @@ func _getfishinfo() -> Dictionary:
 		"fishpopu":fishpopu
 	}
 
-func _setfishinfo(fn: String, delta: int) -> void:
+##增减鱼群数量
+func _setfishquantity(fn: String, delta: int) -> void:
 	
 	for f in fishes:
 		if f.school_name == fn:
@@ -65,12 +68,14 @@ func _setfishinfo(fn: String, delta: int) -> void:
 		if f.school_population < 0:
 			f.school_population = 0
 			break
-	
+
+##按天更新海域
 func _update():
 	
 	for f in fishes:
 		f._naturegrow()
-	
+
+##生成随机鱼群
 func _genfishschool():
 	
 	
