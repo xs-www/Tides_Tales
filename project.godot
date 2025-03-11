@@ -11,7 +11,8 @@ config_version=5
 [application]
 
 config/name="渔歌唱晚"
-config/features=PackedStringArray("4.3", "Mobile")
+run/main_scene="uid://ckv65n3gst1v8"
+config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
 [display]

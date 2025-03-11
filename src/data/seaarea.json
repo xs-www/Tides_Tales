@@ -1,13 +1,14 @@
 {
-    "coastland":{
-        "description":"靠近陆地的浅海区域，水浅风小，鱼类资源丰富，适合新手捕捞。"
-    },
-    "coastsea":{
-        "description":"水深适中，鱼类种类多样，风浪较大，适合有一定经验的渔民。"
-    },
-    "distantsea":{
-        "description":"远离陆地的深海区域，水深且压力大，鱼类稀有且珍贵，捕捞难度高。"
-    }
+	"coastland":{
+		"maximum_capacity": 5000,
+		"description":"靠近陆地的浅海区域，水浅风小，鱼类资源丰富，适合新手捕捞。"
+	},
+	"coastsea":{
+		"maximum_capacity": 20000,
+		"description":"水深适中，鱼类种类多样，风浪较大，适合有一定经验的渔民。"
+	},
+	"distantsea":{
+		"maximum_capacity": 100000,
+		"description":"远离陆地的深海区域，水深且压力大，鱼类稀有且珍贵，捕捞难度高。"
+	}
 }
-
-

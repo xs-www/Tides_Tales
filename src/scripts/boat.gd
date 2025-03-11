@@ -22,7 +22,6 @@ func _init(_item_name : String = 'a boat') -> void:
 	boat_capability = 500
 	boat_durability = 100
 	boat_type = 'small'
-	_setfishnet()
 	pass
 
 ##获取渔网状态
@@ -64,4 +63,6 @@ func _fishsuccess(sea_area: Seaarea) -> float:
 		'large': 0.1 if sea_area.area_type == 'distantwater' else 0
 	}[boat_type]
 	
-	return Functions._round(fish_net.net_probability * area_coefficient + boat_bonus, 2)
+	var population_coefficient = min((sea_area._get_fish_population() / sea_area.maximum_capacity) + 0.3, 1)
+	
+	return Functions._round(population_coefficient * (fish_net.net_probability * area_coefficient + boat_bonus), 2)

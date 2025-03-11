@@ -82,15 +82,108 @@ static func _fishing(time: int, sea_area: Seaarea, boat: Boat) -> Dictionary:
 	var maximun_weight = boat.boat_capability
 	var catch_p = boat._fishsuccess(sea_area)
 	var current_weight = 0
-	for i in range(1, time * 60):
+	for i in range(1, time * 30):
 		if randf() < catch_p:
-			var fishinfo = sea_area._getfishinfo()
+			var fishinfo = sea_area._get_fish_info()
 			if _sum(fishinfo["fishpopu"]) == 0:
 				break
 			var caughtfish = Functions._randomChoiceWithWeight(fishinfo["fishlist"], fishinfo["fishpopu"])
-			sea_area._setfishquantity(caughtfish, -1)
+			sea_area._set_fish_quantity(caughtfish, -1)
 			_addIntoDictionary(caughtfish, [i], catchinfo)
 	var dic = {}
 	for fishtype in catchinfo:
 		dic[fishtype] = len(catchinfo[fishtype])
+	return dic
+	
+static func _gen_saving_fishinfo(_saving_name : String):
+	
+	var fish_name : Dictionary = _loadJSON("res://src/data/fishinfo.json")["fishname"]
+	var fish_char : Dictionary = _loadJSON("res://src/data/fishinfo.json")["fishchar"]
+	
+	var fish_info_dic = {
+		"normal":0,
+		"rare":0,
+		"epic":0,
+		"legendary":0
+	}
+	
+	var fish_target_dic = {
+		"normal":10,
+		"rare":5,
+		"epic":3,
+		"legendary":1
+	}
+	
+	var fish_name_list = fish_name.keys()
+	var fish_char_list = fish_char.keys()
+	
+	var p = true
+	var dic = {}
+	
+	while p:
+		
+		var new_fish = _gen_fish_dic()
+		var f_n = new_fish.keys()[0]
+		var rarity = new_fish[f_n]["rarity"]
+		if fish_info_dic[rarity] < fish_target_dic[rarity]:
+			fish_info_dic[rarity] += 1
+		
+			dic[f_n] = new_fish[f_n]
+		
+		p = false
+		for k in fish_info_dic.keys():
+			if fish_info_dic[k] < fish_target_dic[k]:
+				p = true
+	
+	print(dic)
+
+static func _gen_fish_dic():
+	
+	var fish_name : Dictionary = _loadJSON("res://src/data/fishinfo.json")["fishname"]
+	var fish_char : Dictionary = _loadJSON("res://src/data/fishinfo.json")["fishchar"]
+	
+	var fish_name_list = fish_name.keys()
+	var fish_char_list = fish_char.keys()
+	
+	var dic = {}
+
+	var f_n = _randomChoice(fish_name_list)
+	var f_c1 = _randomChoice(fish_char_list)
+	var f_c1_type = fish_char[f_c1]["type"]
+	var f_c1_rarity = fish_char[f_c1]["rarity"]
+	var f_c1_weight = range(len(f_c1_type))
+	var f_c1_coeff = range(len(f_c1_type))
+	
+	for i in range(len(f_c1_weight)):
+		if f_c1_rarity[i] == 0:
+			f_c1_weight[i] = 100
+			f_c1_coeff[i] = 1.0
+		elif f_c1_rarity[i] == 1:
+			f_c1_weight[i] = 50
+			f_c1_coeff[i] = 40.0
+		elif f_c1_rarity[i] == 2:
+			f_c1_weight[i] = 20
+			f_c1_coeff[i] = 100.0
+		else:
+			f_c1_weight[i] = 10
+			f_c1_coeff[i] = 500.0
+
+	var f_c2_i = _randomChoiceWithWeight(range(len(f_c1_type)), f_c1_weight)
+	var f_c2 = f_c1_type[f_c2_i]
+		
+	var new_fish = fish_name[f_n]
+	new_fish["rarity"] += f_c1_rarity[f_c2_i]
+	new_fish["price"] *= f_c1_coeff[f_c2_i] * new_fish["rarity"]
+		
+	if new_fish["rarity"] == 0:
+		new_fish["rarity"] = 'normal'
+	elif new_fish["rarity"] == 1:
+		new_fish["rarity"] = 'rare'
+	elif new_fish["rarity"] == 2:
+		new_fish["rarity"] = 'epic'
+	else:
+		new_fish["rarity"] = 'legendary'
+		
+	dic[f_c2 + f_c1 + f_n] = new_fish
+	
 	return dic

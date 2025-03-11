@@ -22,6 +22,8 @@ signal quantity_depleted(item: Item)
 ##增加num个物品
 func _add(num: int):
 	item_quantity += num
+	if item_quantity >= item_stack:
+		item_quantity = item_stack
 
 ##移除num个物品
 func _remove(num: int):
@@ -61,6 +63,6 @@ func unstackable():
 ##物品结合
 func _combine(another_item : Item):
 	if another_item.item_name == item_name:
-		item_quantity += another_item.item_quantity
+		_add(another_item.item_quantity)
 		another_item._removeall()
 	

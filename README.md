@@ -65,4 +65,3 @@ cd Tides_Tales
 ## 贡献
 
 如果您对游戏有任何意见或想要贡献，请提交 Issue 或提交 Pull Request！
-

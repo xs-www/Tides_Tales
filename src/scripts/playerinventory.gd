@@ -62,5 +62,4 @@ func _add_item(item: Item):
 
 ##当某物品用光时移除
 func _on_item_depleted(item: Item):
-	print(item.item_name + " 已耗尽，移除库存。")
 	items[item.item_type].erase(item)  # 从库存列表中删除

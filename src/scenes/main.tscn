@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ckv65n3gst1v8"]
 
-[ext_resource type="Script" path="res://src/scripts/main.gd" id="1_4ly3h"]
+[ext_resource type="Script" uid="uid://dqqv064kf6kxi" path="res://src/scripts/main.gd" id="1_4ly3h"]
 [ext_resource type="Texture2D" uid="uid://dw2jpc2mwe4ak" path="res://src/assets/texture/background/bg main.png" id="2_qeasj"]
 [ext_resource type="Texture2D" uid="uid://bqday7gdotxeh" path="res://src/assets/texture/background/bg fishing.png" id="3_iu0wt"]
 [ext_resource type="Texture2D" uid="uid://d3pt528i57y41" path="res://src/assets/texture/background/bg market.jpg" id="4_770mx"]
